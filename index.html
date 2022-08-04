@@ -40,7 +40,8 @@
 
         .container {
             display: grid;
-            grid-template-rows: auto 1fr auto;
+            grid-template-columns: repeat(1,800px);
+            /*grid-template-rows: auto 1fr auto;*/
             width: 800px;
             
         }
@@ -73,8 +74,8 @@
         .label {
             font-size: var(--md);
             font-weight: bold;
-            
-            margin-bottom: 4px;
+            margin-top: 32px;
+            margin-bottom: 0;
         }
 
         .box {
@@ -101,8 +102,10 @@
         */
         @media (max-width:640px) {
             .logo {
-                display: block;
+                width: 240px;
+                height: 240px;
             }
+
             
         }
     </style>
@@ -116,14 +119,114 @@
                 Comandos más usados en GIT
             </p>
             <div class="box">
-                <label for="comand1" class="label">git pull origin main</label>
+                <label for="comand1" class="label">Actualiza la rama local desde el origen.</label>
                 <p class="parrafo">
-                    Actualiza la rama local desde el origen.
+                    
+                    git pull origin main
                 </p>
 
-                <label for="comand1" class="label">git fetch -p</label>
+                <label for="comand1" class="label">Actualiza las ramas remotas que se hayan creado.</label>
                 <p class="parrafo">
-                    Actualiza las ramas remotas que se hayan creado.
+                    
+                    git fetch -p
+                </p>
+
+                <label for="comand1" class="label">Nos dice el estado de la rama actual.</label>
+                <p class="parrafo">
+                    
+                    git status
+                </p>
+
+                <label for="comand1" class="label">Nos muestra tanto las ramas locales como remotas.</label>
+                <p class="parrafo">
+                    
+                    git branch -a
+                </p>
+
+                <label for="comand1" class="label">Permite crear una nueva rama.</label>
+                <p class="parrafo">
+                    
+                    git branch "mi_nueva_rama"
+                </p>
+
+                <label for="comand1" class="label">Permite cambiarme a la rama que se creo.</label>
+                <p class="parrafo">
+                    
+                    git checkout "mi_nueva_rama"
+                </p>
+
+                <label for="comand1" class="label">Muestra todos los commits que se han hecho en la rama actual.</label>
+                <p class="parrafo">
+                    
+                    git log
+                </p>
+
+                <label for="comand1" class="label">Muestra los archivos que se han modificado en la rama actual.</label>
+                <p class="parrafo">
+                    
+                    git show
+                </p>
+
+                <label for="comand1" class="label">Agrega los cambios que hemos hecho y luego hace un commit para dejar listos dichos cambios para un push.</label>
+                <p class="parrafo">
+                    
+                    git commit -am "Mensaje de mi primer commit"
+                </p>
+
+                <label for="comand1" class="label">Crea la rama remota y envia los cambios a Github.</label>
+                <p class="parrafo">
+                    
+                    git push origin "mi_nueva_rama"
+                </p>
+
+                <label for="comand1" class="label">Nos permite cambiar de rama.</label>
+                <p class="parrafo">
+                    
+                    git checkout "nombre_de_rama_a_la_que_deseo_cambiar"
+                </p>
+
+                <label for="comand1" class="label">Elimina la rama remota.</label>
+                <p class="parrafo">
+                    
+                    git push origin --delete "mi_nueva_rama"
+                </p>
+
+                <label for="comand1" class="label">Elimina la rama local.</label>
+                <p class="parrafo">
+                    
+                    git branch -d "mi_nueva_rama"
+                </p>
+
+                <label for="comand1" class="label">Obliga el cambio de rama aunque tengamos conflictos.</label>
+                <p class="parrafo">
+                    
+                    git checkout -f "mi_nueva_rama"
+                </p>
+
+                <label for="comand1" class="label">
+                    Comparamos dos archivos de ramas diferentes. En este ejemplo comparamos 
+                    la rama remota main con la rama local main.
+                </label>
+                <p class="parrafo">    
+                    git diff origin/main:./mi_archivo main:./mi_archivo
+                </p>
+
+                <label for="comand1" class="label">Reseteamos nuestra rama remota y traemos lo que esta en la rama local.</label>
+                <p class="parrafo">
+                    
+                    git reset --hard origin/main
+                </p>
+
+                <label for="comand1" class="label">Elimina la rama local.</label>
+                <p class="parrafo">
+                    
+                    git rm -r --cached carpeta/
+                </p>
+
+                <label for="comand1" class="label">Descartar cambios de un archivo.</label>
+                <p class="parrafo">
+                    
+                    git checkout -- #ruta_del_archivo_a_ignorar
                 </p>
 
             </div>
